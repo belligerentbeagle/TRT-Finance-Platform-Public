@@ -37,16 +37,63 @@ docker run -p 8051:8051 trt-finance
 1. Type `docker stop <container_id or name>`
 
 
-## "User stories"
-1. Mr Wong adds students and their details, like the class that they belong in. 
-1. Mr Wong can add students to his class. Qn: Can a student be in multiple classes? Assume no. 
+## User Stories
 
-Managing student details
-1. Set parents by id, but select the parent by name. OR just select an existing parent.
+### Core User Stories
+1. **Student Management**: Mr Wong adds students and their details, like the class that they belong in.
+2. **Class Assignment**: Mr Wong can add students to his class (assumes a student can only be in one class at a time).
+3. **Parent Management**: Set parents by ID, but select the parent by name, or select an existing parent.
+
+### Extended User Stories
+4. **Invoice Generation**: Generate invoices for students each term and email them to parents automatically.
+5. **Payment Tracking**: Upload bank statements and automatically match payments to students to track who has paid.
+6. **Payment Status Management**: View all students in a term, categorized as paid and unpaid.
+7. **Payment Reminders**: Send reminder emails to all unpaid students.
+8. **Term and Class Management**: Create and manage academic terms and classes with different rates.
+9. **Email Communication**: Customize and send emails to parents with invoice attachments.
+10. **Payment Analysis**: Analyze bank statements to cross-reference payments with student records.
 
 ## Tech Stack
-Oracle SQL: Oracle Instant Client
 
+### Tech Architecture
+![TechArchitecture](./public/images/f4.png)
+
+### Backend & Database
+- **Python**: Core backend language
+- **SQLite**: Database management (based on DbHelper imports)
+- **Relational Database Schema**
+![DBSchema](./public/images/DbSchema.png)
+
+### Frontend & UI
+- **Streamlit**: Web application framework for the user interface
+- **Plotly Express**: Data visualization and charts
+
+### Document Generation
+- **LaTeX**: Invoice generation (uses MacTeX)
+- **PDF Generation**: For creating invoice documents
+
+### Authentication & Security
+- **Streamlit Authenticator**: User authentication system
+- **YAML**: Configuration file management
+
+### Email & Communication
+- **Gmail API**: Email sending functionality through Google's API
+- **Google OAuth2**: Authentication for Gmail integration
+
+### Data Processing
+- **Pandas**: Data manipulation and analysis
+- **CSV Processing**: Bank statement analysis
+
+### Development & Deployment
+- **Docker**: Containerization for deployment
+- **Pytest**: Testing framework
+- **Git**: Version control
+<!-- 
+### AI/ML Features
+- **NVIDIA API**: AI-powered chatbot (TRT-GPT)
+- **LangChain**: Conversational AI framework
+- **Meta Llama 3.1**: Language model for the AI assistant
+ -->
 
 ## Dev notes
 
@@ -57,11 +104,6 @@ brew install --cask mactex-no-gui
 pip install codecs subprocess
 
 todo: see total sum to be collected for this term.
-
-
-
-Database Schema
-![DBSchema](./public/images/DbSchema.png)
 
 
 Use of session state:
@@ -86,7 +128,7 @@ Commands to run to test
 ```
 
 
-## Continuation:
+## Flows/Edge Cases:
 Invoice Generation page flow:
 > Add students to term
 > Show exisiting students in term
