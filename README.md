@@ -1,6 +1,9 @@
 # TRT-Finance-Platform
 A commissioned project for my ex-tuition teacher, built with gratitude for his dedication to his students.
 
+![HomePage](./public/images/f1.png)
+![ManageStudents](./public/images/f2.png)
+![ManageClasses](./public/images/f3.png)
 
 ## Problem
 My ex-tuition teacher had to regularly chase after parents who had not paid their tuition fees. 
