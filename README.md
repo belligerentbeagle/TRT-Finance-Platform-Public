@@ -42,7 +42,7 @@ docker run -p 8051:8051 trt-finance
 ### Core User Stories
 1. **Student Management**: Mr Wong adds students and their details, like the class that they belong in.
 2. **Class Assignment**: Mr Wong can add students to his class (assumes a student can only be in one class at a time).
-3. **Parent Management**: Set parents by ID, but select the parent by name, or select an existing parent.
+3. **Parent Management**: Add new parents to the system with their contact details, then assign parents to students by ID or select existing parents by name.
 
 ### Extended User Stories
 4. **Invoice Generation**: Generate invoices for students each term and email them to parents automatically.
@@ -59,14 +59,14 @@ docker run -p 8051:8051 trt-finance
 ![TechArchitecture](./public/images/f4.png)
 
 ### Backend & Database
-- **Python**: Core backend language
-- **SQLite**: Database management (based on DbHelper imports)
+- **Python**: Core backend logic and processing 
+- **SQLite**: Database management 
 - **Relational Database Schema**
 ![DBSchema](./public/images/DbSchema.png)
 
 ### Frontend & UI
 - **Streamlit**: Web application framework for the user interface
-- **Plotly Express**: Data visualization and charts
+- **Plotly Express**: Data and graph visualization
 
 ### Document Generation
 - **LaTeX**: Invoice generation (uses MacTeX)
