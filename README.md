@@ -1,5 +1,6 @@
 # TRT-Finance-Platform
 [![wakatime](https://wakatime.com/badge/user/018cc5a8-3c44-4f51-a6f0-5021ac41b5e1/project/f7854c92-64d6-42eb-9de2-b1109c3e0445.svg)](https://wakatime.com/badge/user/018cc5a8-3c44-4f51-a6f0-5021ac41b5e1/project/f7854c92-64d6-42eb-9de2-b1109c3e0445)
+
 A commissioned project for my ex-tuition teacher, built with gratitude for his dedication to his students.
 
 ![HomePage](./public/images/f1.png)
